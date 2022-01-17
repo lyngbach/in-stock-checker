@@ -1,0 +1,8 @@
+{
+	"NOTIFY_ON_MISSING_NODE": false,
+	"EMAIL_HOST": "smtp.examplesite.com",
+	"EMAIL_USER": "",
+	"EMAIL_PASSWORD": "",
+	"PUBLIC_VAPID_KEY": "",
+	"PRIVATE_VAPID_KEY": ""
+}

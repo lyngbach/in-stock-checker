@@ -1,0 +1,14 @@
+[
+	{
+		"url": "https://www.elgiganten.dk/product/gaming/spillekonsol/playstation/playstation-spillekonsol/playstation-5-2021/345097",
+		"xPath": "//*[@id=\"buy-box\"]/div[1]/ul/li/elk-product-presale/div/span",
+		"expected": "Releasedato ukendt",
+		"description": "Elgiganten - PlayStation 5 (2021)"
+	},
+	{
+		"url": "https://www.power.dk/gaming-og-underholdning/playstation/playstation-konsoller/playstation-5/p-1077687/",
+		"xPath": "//*[@id=\"product-intro\"]/div[2]/div/div/div[3]/div/div[2]/div[2]/div/div/div/pwr-product-stock-label[1]/span",
+		"expected": "Ej på lager online",
+		"description": "Power - PlayStation 5"
+	}
+]
