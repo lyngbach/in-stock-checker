@@ -26,7 +26,7 @@ const InStockChecker = {
 		// this.runSiteChecker();
 
 		Notify.init();
-		// Cron.init();
+		Cron.init();
 
 		// testing purpose
 		// setTimeout(() => {
@@ -44,7 +44,7 @@ const InStockChecker = {
 	},
 
 	async runSiteChecker () {
-		console.log('runSiteChecker');
+		console.log('running site checker');
 
 		let launchOptions = {
 			headless: true,
@@ -62,7 +62,7 @@ const InStockChecker = {
 			for (let index = 0; index < sites.length; index += 1) {
 				
 				// making it wait for each loop on purpose to let previous chrome tab finish
-				console.log('checking site:', sites[index].url);
+				console.log('checking site =>', sites[index].url);
 				await checkSite(sites[index], page);
 			}
 		} finally {

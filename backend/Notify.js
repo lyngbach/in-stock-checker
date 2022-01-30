@@ -97,7 +97,7 @@ const Notify = {
 
 		try {
 			webPushResult = await webpush.sendNotification(Notify.subscription, payload);
-			console.log('webPushResult sent out');
+			console.log('web push sent out');
 		} catch (error) {
 			console.log('error sending out web push =>', error);
 		}

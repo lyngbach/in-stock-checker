@@ -28,8 +28,8 @@ const checkSite = async (site, page) => {
 
 		if (!isMatch(value, expected)) {
 			console.log(`${description} was expecting "${expected}" but got "${value}" - Sending out an email notification!` );
-			Notify.sendEmail({ title: description, body: `Stock status changed from <b>${expected}</b> to <b>${value}</b>`, site: site, value: value });
-			Notify.sendWebPush({ title: description, body: `Stock status changed from <b>${expected}</b> to <b>${value}</b>`, site: site, value: value });
+			await Notify.sendEmail({ title: description, body: `Stock status changed from <b>${expected}</b> to <b>${value}</b>`, site: site, value: value });
+			await Notify.sendWebPush({ title: description, body: `Stock status changed from <b>${expected}</b> to <b>${value}</b>`, site: site, value: value });
 		} else {
 			console.log(`no changes from: ${description} =>`, value);
 
@@ -37,8 +37,8 @@ const checkSite = async (site, page) => {
 			// Comment these out if you want to test the notifcation out even though the expected xPath value hasent changed, in order to 
 			// double check you're receiving the notifications - just dont forget to comment these out again :)
 
-			// Notify.sendEmail({ title: description, body: `Stock status changed from <b>${expected}</b> to <b>${value}</b>`, site: site, value: value });
-			// Notify.sendWebPush({ title: description, body: `Stock status changed from <b>${expected}</b> to <b>${value}</b>`, site: site, value: value });
+			// await Notify.sendEmail({ title: description, body: `Stock status changed from <b>${expected}</b> to <b>${value}</b>`, site: site, value: value });
+			// await Notify.sendWebPush({ title: description, body: `Stock status changed from <b>${expected}</b> to <b>${value}</b>`, site: site, value: value });
 		}
 
 	} catch (error) {
@@ -50,6 +50,8 @@ const checkSite = async (site, page) => {
 		}
 
 	}
+
+	console.log('---------------------------------------------------------------------------------');
 };
 
 export { checkSite };
