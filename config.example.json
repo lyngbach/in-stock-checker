@@ -1,5 +1,6 @@
 {
 	"NOTIFY_ON_MISSING_NODE": false,
+	"CRON_MINUTE": "5",
 	"EMAIL_HOST": "smtp.examplesite.com",
 	"EMAIL_USER": "",
 	"EMAIL_PASSWORD": "",

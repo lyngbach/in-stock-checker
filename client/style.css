@@ -264,6 +264,8 @@ button:hover {
 	transition: 0.7s ease;
 	opacity: 0;
 	transform: translateY(100%);
+	text-decoration: none;
+	color: #333;
 }
 
 .notifcationWrapper.show {

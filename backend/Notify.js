@@ -79,7 +79,9 @@ const Notify = {
 		const payload = JSON.stringify({
 			title: data.title ? data.title : 'In Stock Checker push test',
 			body: data.body ? data.body : 'Push notification <b>works</b>! Your notifcations will also be shown here in case you were AFK and missed it.',
-			created: new Date().toISOString()
+			created: new Date().toISOString(),
+			site: data.site,
+			value: data.valiue
 		});
 
 		let webPushResult = null;

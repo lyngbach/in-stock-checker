@@ -120,8 +120,10 @@ const App = {
 			</div>
 		`;
 
-		const node = document.createElement('div');
+		const node = document.createElement('a');
 
+		node.href = data.site ? data.site.url : 'http://localhost:4000';
+		node.setAttribute('target', '_blank');
 		node.classList.add('notifcationWrapper');
 		node.innerHTML = notification;
 

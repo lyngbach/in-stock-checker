@@ -20,11 +20,13 @@ app.post('/resubscribe', Routes.resubscribe);
 const InStockChecker = {
 
 	async init () {
-		// this.runSiteChecker();
 		this.startServer();
 
+		// uncomment this to run the site checker on start up regardless of the cron service
+		// this.runSiteChecker();
+
 		Notify.init();
-		Cron.init();
+		// Cron.init();
 
 		// testing purpose
 		// setTimeout(() => {
