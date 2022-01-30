@@ -10,7 +10,7 @@ const isMatch = (actual, expected) => {
 		return expected.includes(actual);
 	}
 	
-	return actual === expected;f
+	return actual === expected;
 };
 
 const checkSite = async (site, page) => {
