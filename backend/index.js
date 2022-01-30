@@ -15,7 +15,6 @@ app.use(express.static(path.join(__dirname, 'client')));
 
 app.get('/public_key', Routes.getPublicKey);
 app.post('/subscribe', Routes.subscribe);
-app.post('/resubscribe', Routes.resubscribe);
 
 const InStockChecker = {
 
@@ -27,20 +26,6 @@ const InStockChecker = {
 
 		Notify.init();
 		Cron.init();
-
-		// testing purpose
-		// setTimeout(() => {
-		// 	console.log('running send push test');
-
-		// 	Notify.sendWebPush({ title: 'This is a new title', body: 'Item stock has changed!' })
-		// }, 4000);
-
-		// Notify.sendEmail({ title: "description text here", body: `Stock status changed from <b>expected</b> to <b>value</b>`, site: {
-		// 	"url": "https://www.elgiganten.dk/product/gaming/spillekonsol/playstation/playstation-spillekonsol/playstation-5-2021/345097",
-		// 	"xPath": "//*[@id=\"buy-box\"]/div[1]/ul/li/elk-product-presale/div/span",
-		// 	"expected": "Releasedato ukendt",
-		// 	"description": "Elgiganten - PlayStation 5 (2021)"
-		// }});
 	},
 
 	async runSiteChecker () {

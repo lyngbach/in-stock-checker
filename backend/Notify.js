@@ -14,8 +14,6 @@ const transporter = nodemailer.createTransport({
 	}
 });
 
-
-
 const Notify = {
 
 	init () {

@@ -36,14 +36,6 @@ const Routes = {
 		}
 
 		response.json({ isSubscribed: isSubscribed });
-	},
-
-	async resubscribe (request, response) {
-		const body = request.body;
-
-		console.log('resubscribe body', body);
-
-		response.json({ success: 'ok' });
 	}
 
 };
