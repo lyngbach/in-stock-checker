@@ -23,7 +23,7 @@ const checkSite = async (site, page) => {
 	try {
 		
 		const elHandle = await page.$x(xPath);
-		const text = await page.evaluate((el) => el.textContent, elHandle[0]);
+		const text = await page.evaluate((el) => el && el.textContent, elHandle[0]);
 		const value = String(text).replace(/^\s+|\s+$/g, '');
 
 		if (!isMatch(value, expected)) {

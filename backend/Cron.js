@@ -9,10 +9,6 @@ const Cron = {
 
 		// Run the check site functionality every 5th minute of the hour (10:00, 10:05, 10:10 etc)
 		cron.schedule(`*/${config.CRON_MINUTE} * * * *`, () => App.runSiteChecker());
-	},
-
-	async checkSite () {
-		console.log('checkSite');
 	}
 
 };

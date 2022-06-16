@@ -8,7 +8,7 @@ It was about time for me to get a PlayStation 5 and it was nowhere in stock at r
 
 ## Setup
 
-The jaydlawrence repo was imo a bit complicated to setup with a lot of cron, external push and docker configuration. This approach should be a little easier to complete and only require Node.js and a Chrome browser (works in Edge and Firefox as well). You dont have to setup and configure Docker nor having any knowledge about cron services for this to work.
+The jaydlawrence repo was imo a bit complicated to setup with a lot of cron, external push and docker configuration. This approach should be a little easier to complete and only require Node.js 16.x+ and a Chrome browser (works in Edge and Firefox as well). You dont have to setup and configure Docker nor having any knowledge about cron services for this to work.
 
 ### Sites
 Copy the `sites.example.json` and rename it to `sites.json`. Examples are provided by default, you can just change those and add more objects for the sites you need to check up on.
@@ -99,7 +99,7 @@ npm start
 ```
 This will start the program and init the cron service and fire up a local server running at `http://localhost:4000`.
 
-Open the site in a Chrome, Edge or Firefox browser (works best in Chrome), and press the subscribe button. This will create a local `subscription.json` file which is used for saving your local push credentials (instead of saving it to an eg. database). Make sure to allow the local push notifcation in the browser popup and if you received the push its working as expected.  
+Open the site in a Chrome, Edge or Firefox browser (works best in Chrome), and press the subscribe button. This will create a local `subscription.json` file which is used for saving your local push credentials (instead of saving it to an eg. database). Make sure to allow the local push notifcation in the browser popup, and if you received a push its working as expected.  
 As long as you keep Chrome open you will receive a push notifcation if one of your sites `expected` properties changes and if you keep the localhost:4000 tab open it will show up in there as well in case you are away from the computer when it arived.
 
 The web push technology in this program make use of the BroadcastChannel API which is not yet supported by Safari and therefor wont work just yet. According to [caniuse.com](https://caniuse.com/?search=BroadcastChannel) it seems to be coming to Safari soon.

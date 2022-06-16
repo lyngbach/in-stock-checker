@@ -19,7 +19,7 @@ app.post('/subscribe', Routes.subscribe);
 const InStockChecker = {
 
 	async init () {
-		this.startServer();
+		await this.startServer();
 
 		// uncomment this to run the site checker on start up regardless of the cron service
 		// this.runSiteChecker();
